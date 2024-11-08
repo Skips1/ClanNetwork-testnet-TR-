@@ -36,3 +36,8 @@ EOF
 
 source ~/.profile
 ```
+Bu komutu girdiğiniz zaman aşağıda ki çıktıyı alırsınız, komut:
+
+```
+go version
+```
