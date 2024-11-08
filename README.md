@@ -41,3 +41,8 @@ Bu komutu girdiğiniz zaman aşağıda ki çıktıyı alırsınız, komut:
 ```
 go version
 ```
+Alacağınız çıktı: 
+
+```
+go version go1.18 linux/amd64
+```
