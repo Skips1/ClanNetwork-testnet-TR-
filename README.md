@@ -46,3 +46,9 @@ Alacağınız çıktı:
 ```
 go version go1.18 linux/amd64
 ```
+# Clan network dosyalarını indirme:
+
+```
+wget https://github.com/ClanNetwork/clan-network/releases/download/v1.0.4-alpha/clan-network_v1.0.4-alpha_linux_amd64.tar.gz
+sudo tar -C /usr/local/bin -zxvf clan-network_v1.0.4-alpha_linux_amd64.tar.gz
+
