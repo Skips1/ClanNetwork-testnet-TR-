@@ -52,3 +52,10 @@ go version go1.18 linux/amd64
 wget https://github.com/ClanNetwork/clan-network/releases/download/v1.0.4-alpha/clan-network_v1.0.4-alpha_linux_amd64.tar.gz
 sudo tar -C /usr/local/bin -zxvf clan-network_v1.0.4-alpha_linux_amd64.tar.gz
 
+git clone https://github.com/ClanNetwork/clan-network
+cd clan-network
+git fetch origin --tags
+git checkout v1.0.4-alpha
+
+make install
+```
