@@ -59,3 +59,8 @@ git checkout v1.0.4-alpha
 
 make install
 ```
+Gerekli düzenlemeleri yapıyoruz: chainid - peer - monikername
+
+```
+CHAIN_ID=playstation-2
+```
