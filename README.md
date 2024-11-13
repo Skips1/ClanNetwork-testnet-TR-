@@ -64,3 +64,12 @@ Gerekli düzenlemeleri yapıyoruz: chainid - peer - monikername
 ```
 CHAIN_ID=playstation-2
 ```
+# TEST yazan kısmı kendinize göre düzenleyin, örnek MONIKER_NAME="RUES" :
+
+```
+MONIKER_NAME="TEST"
+```
+```
+CHAIN_REPO="https://raw.githubusercontent.com/ClanNetwork/testnets/main/$CHAIN_ID" && \
+export PEERS="$(curl -s "$CHAIN_REPO/persistent-peers.txt")"
+```
