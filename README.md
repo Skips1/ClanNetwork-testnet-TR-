@@ -73,3 +73,7 @@ MONIKER_NAME="TEST"
 CHAIN_REPO="https://raw.githubusercontent.com/ClanNetwork/testnets/main/$CHAIN_ID" && \
 export PEERS="$(curl -s "$CHAIN_REPO/persistent-peers.txt")"
 ```
+# Bu komuttan sonra aşşağıdaki gibi bir çıktı almalısınız, komut:
+```
+echo $PEERS
+```
