@@ -85,3 +85,14 @@ echo $PEERS
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uclan\"/" ~/.clan/config/app.toml
 cland init $MONIKER_NAME --chain-id=$CHAIN_ID
 ```
+# Genesis dosyasını indiriyoruz ve peer listesini configurasyon dosyasına ekliyoruz:
+
+```
+curl https://raw.githubusercontent.com/ClanNetwork/testnets/main/$CHAIN_ID/genesis.json > ~/.clan/config/genesis.json
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.clan/config/config.toml
+```
+# Key name kısmını kendi ismimize göre düzenlemek lazım, örnek: cland keys add RUES , oluşan key bilgilerini kaydedin.
+
+```
+cland keys add <key-name>
+```
