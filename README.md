@@ -122,3 +122,9 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 EOF
 ```
+# Şimdi start emrimizi verelim:
+```
+sudo -S systemctl daemon-reload
+sudo -S systemctl enable cland
+sudo -S systemctl start cland
+```
