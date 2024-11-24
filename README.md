@@ -97,3 +97,9 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.clan/
 cland keys add <key-name>
 ```
 # Clan Networkü başlatıyoruz:
+
+```
+apt-get install screen
+screen -S clan
+cland start
+```
