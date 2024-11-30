@@ -140,4 +140,23 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
 https://faucet-testnet.clan.network/
 ```
+# Screenden ctrl a d ile çıkıp işlemlerin arkada aktif olarak çalışması için service dosyası oluşturuyoruz:
+
+```
+sudo tee /etc/systemd/system/cland.service > /dev/null <<'EOF'
+[Unit]
+Description=Clan daemon
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/cland start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
 
