@@ -165,4 +165,8 @@ sudo -S systemctl daemon-reload
 sudo -S systemctl enable cland
 sudo -S systemctl start cland
 ```
+# Node durumuna bakmak için
+```
+systemctl status cland
+```
 
