@@ -169,4 +169,8 @@ sudo -S systemctl start cland
 ```
 systemctl status cland
 ```
+# Node'un sync olup olmadığını anlamak için (false çıktısı almayı unutmayın) : 
+```
+curl http://localhost:26657/status | jq .result.sync_info.catching_up
+```
 
