@@ -192,3 +192,12 @@ cland tx staking create-validator \
   --gas-prices 0uclan \
 --from <key-name>
 ```
+# Teşekkürler, bir sorununuz olursa ulaşabileceğiniz yerler:
+
+```
+https://t.me/RuesAnnouncement
+https://t.me/RuesChat
+https://t.me/RuesNode
+https://t.me/RuesNodeChat
+https://forum.rues.info/
+```
