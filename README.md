@@ -177,3 +177,18 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
 https://faucet-testnet.clan.network/
 ```
+# Validator kurma:
+```
+cland tx staking create-validator \
+  --amount 1000000000uclan \
+  --commission-max-change-rate "0.1" \
+  --commission-max-rate "0.20" \
+  --commission-rate "0.1" \
+  --min-self-delegation "1" \
+  --details "validators write bios too" \
+  --pubkey=$(cland tendermint show-validator) \
+  --moniker $MONIKER_NAME \
+  --chain-id $CHAIN_ID \
+  --gas-prices 0uclan \
+--from <key-name>
+```
