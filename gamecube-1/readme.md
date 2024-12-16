@@ -38,3 +38,19 @@ sudo tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
 
 # 3. Add the path to the go-binary to your system path:
 # (for this to persist, add this line to your ~/.profile or ~/.bashrc or  ~/.zshrc)
+export PATH=$PATH:/usr/local/go/bin
+
+# 4. Verify your installation:
+
+go version
+
+# go version go1.18.1 linux/amd64
+```
+
+```sh
+mkdir -p $GOPATH/src/github.com/ClanNetwork
+cd $GOPATH/src/github.com/ClanNetwork
+git clone https://github.com/ClanNetwork/clan-network && cd clan-network
+git fetch origin --tags
+make install
+```
