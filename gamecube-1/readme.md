@@ -72,3 +72,52 @@ commit: a7ee4541dbb19e55221bbb575284eeb39c462610
 build_tags: ""
 go: go version go1.18 darwin/amd64
 ```
+## Create testnet validator
+
+1. Init Chain and start your node
+
+   ```sh
+   > cland init <moniker-name> --chain-id=gamecube-1
+   ```
+
+2. Create a local key pair
+
+   ```sh
+   > cland keys add <key-name>
+   > cland keys show <key-name> -a
+   ```
+
+3. Download genesis
+   Fetch `genesis.json` into `cland`'s `config` directory.
+
+   ```sh
+   > curl -s https://raw.githubusercontent.com/ClanNetwork/testnets/main/gamecube-1/genesis/genesis.tar.gz > genesis.tar.gz
+   > tar -C ~/.clan/config/ -xvf genesis.tar.gz
+   ```
+
+   **Genesis sha256**
+
+   ```sh
+    shasum -a 256 ~/.clan/config/genesis.json
+   7a496cddea2538231af2179129447999725b60000b9073f39007485df7fc2961  /home/amit/.clan/config/genesis.json
+   ```
+
+4. Add persistent peers
+   Add persistent peers in `config.toml`.
+
+   ```sh
+   > vi $HOME/.clan/config/config.toml
+   ```
+
+   Find the following section and add the seed nodes.
+
+   ```sh
+   # Comma separated list of seed nodes to connect to
+   seeds = ""
+   ```
+
+   ````sh
+   # Comma separated list of persistent peers to connect to
+   persistent_peers = "15bd2b7e8c2f4335dc65f11bc1f432dc2e99ea7e@104.196.221.90:26656"
+   ```ֿ
+   ````
