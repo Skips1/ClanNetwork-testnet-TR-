@@ -54,3 +54,21 @@ git clone https://github.com/ClanNetwork/clan-network && cd clan-network
 git fetch origin --tags
 make install
 ```
+## Verify installation
+
+To verify if the installation was successful, execute the following command:
+
+```sh
+cland version --long
+```
+
+It will display the cland of `cland` currently installed:
+
+```sh
+name: Clan-Network
+server_name: clan-networkd
+version: latest-a7ee4541
+commit: a7ee4541dbb19e55221bbb575284eeb39c462610
+build_tags: ""
+go: go version go1.18 darwin/amd64
+```
