@@ -121,3 +121,36 @@ go: go version go1.18 darwin/amd64
    persistent_peers = "15bd2b7e8c2f4335dc65f11bc1f432dc2e99ea7e@104.196.221.90:26656"
    ```ֿ
    ````
+   ## Start node automatically (Linux only)
+
+Create a `systemd` service
+
+```sh
+> sudo vi /etc/systemd/system/cland.service
+```
+
+Copy and paste the following and update `<your_username>` and `<go_workspace>`:
+
+```sh
+[Unit]
+Description=cland
+After=network-online.target
+
+[Service]
+User=<your_username>
+ExecStart=/home/<your_username>/<go_workspace>/bin/cland start
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+```
+
+**This assumes `$HOME/go_workspace` to be your Go workspace. Your actual workspace directory may vary.**
+
+```sh
+> sudo systemctl enable cland
+> sudo systemctl start cland
+```
+
