@@ -156,3 +156,18 @@ WantedBy=multi-user.target
 ## Create testnet validator
 
 1. Request tokens from the Faucet (TBD Link).
+2. 2. Create validator
+
+   ```sh
+   $ cland tx staking create-validator \
+   --amount 50000000uclan \
+   --commission-max-change-rate "0.1" \
+   --commission-max-rate "0.20" \
+   --commission-rate "0.1" \
+   --min-self-delegation "1" \
+   --details "validators write bios too" \
+   --pubkey=$(cland tendermint show-validator) \
+   --moniker <your_moniker> \
+   --chain-id gamecube-1 \
+   --from <key-name>
+   ```
