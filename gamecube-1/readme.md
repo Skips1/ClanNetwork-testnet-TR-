@@ -153,4 +153,6 @@ WantedBy=multi-user.target
 > sudo systemctl enable cland
 > sudo systemctl start cland
 ```
+## Create testnet validator
 
+1. Request tokens from the Faucet (TBD Link).
