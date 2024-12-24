@@ -16,3 +16,21 @@
 > wget https://github.com/ClanNetwork/clan-network/releases/download/v1.0.0-alpha/clan-network_v1.0.0-alpha_linux_amd64.tar.gz
 > sudo tar -C /usr/local/bin -zxvf clan-network_v1.0.0-alpha_linux_amd64.tar.gz
 ```
+#### Verify installation
+
+To verify if the installation was successful, execute the following command:
+
+```sh
+cland version --long
+```
+
+It will display the version of `cland` currently installed:
+
+```sh
+name: Clan-Network
+server_name: clan-networkd
+version: latest
+commit: a7ee4541dbb19e55221bbb575284eeb39c462610
+build_tags: ""
+go: go version go1.18 linux/amd64
+```
