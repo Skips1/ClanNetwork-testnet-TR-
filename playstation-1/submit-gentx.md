@@ -34,3 +34,6 @@ commit: a7ee4541dbb19e55221bbb575284eeb39c462610
 build_tags: ""
 go: go version go1.18 linux/amd64
 ```
+## Setup validator node
+
+Below are the instructions to generate and submit your genesis transaction.
