@@ -37,3 +37,40 @@ go: go version go1.18 linux/amd64
 ## Setup validator node
 
 Below are the instructions to generate and submit your genesis transaction.
+### Generate genesis transaction (gentx)
+
+1. Initialize the Clan Network directories and create the local genesis file with the correct
+   chain-id
+
+   ```sh
+   cland config chain-id playstation-1
+   # moniker is the name of your node
+   cland init <moniker>
+   ```
+
+2. Create a local key pair
+
+   ```sh
+   cland keys add <key-name>
+   ```
+
+3. Add your account to your local genesis file with a given amount and the key you
+   just created. Use only `1000000000000uclan`, other amounts will be ignored.
+
+   ```sh
+   cland add-genesis-account $(cland keys show <key-name> -a) 1000000000000uclan
+   ```
+
+4. Generate the genesis transaction (gentx) that submits your validator info to the chain.
+   The amount here is how much of your own funds you want to delegate to your validator (self-delegate).
+   Start with 50% of your total (500000000000uclan). You can always delegate the rest later.
+
+   ```sh
+   cland gentx <key-name> 500000000000uclan --chain-id=playstation-1
+   ```
+
+   If all goes well, you will see a message similar to the following:
+
+   ```sh
+   Genesis transaction written to "/home/user/.clan/config/gentx/gentx-******.json"
+   ```
