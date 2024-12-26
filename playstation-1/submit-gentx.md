@@ -74,3 +74,26 @@ Below are the instructions to generate and submit your genesis transaction.
    ```sh
    Genesis transaction written to "/home/user/.clan/config/gentx/gentx-******.json"
    ```
+   ### Submit genesis transaction
+
+Submit your gentx in a PR [here](https://github.com/ClanNetwork/testnets)
+
+- Fork [the testnets repo](https://github.com/ClanNetwork/testnets) into your Github account
+
+- Clone your repo using
+
+  ```sh
+  git clone https://github.com/<github-username>/testnets
+  ```
+
+- Copy the generated gentx json file to `<repo_path>/playstation-1/gentxs/`
+
+  ```sh
+  cd testnets
+  cp ~/.clan/config/gentx/gentx*.json ./playstation-1/gentxs/
+  ```
+
+- Commit and push to your repo
+- Create a PR onto https://github.com/ClanNetwork/testnets
+
+✨ Congrats! You have done everything you need to participate in the testnet. Now just hang tight for further instructions on starting your node when the network starts (28/4/2022 1300 UTC).
