@@ -26,3 +26,14 @@ persistent_peers = "43de6c2ae93262a7369f2134c19cc87109c41006@34.73.151.40:26656,
 **Seed nodes**
 
 N/A
+## Overview
+
+Thank you for submitting a gentx! This guide will provide instructions on getting ready for the testnet.
+
+**The Chain Genesis Time is on 17:00 UTC on April 28, 2022**
+
+Please have your validator up and ready by this time, and be available for further instructions if necessary
+at that time.
+
+The primary point of communication for the genesis process will be the #validators. Right now only white-listed validators can participate.
+channel on the [Clan's Discord](http://discord.gg/9m4JBfD3bh).
