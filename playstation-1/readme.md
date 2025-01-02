@@ -61,3 +61,13 @@ There are 2 options available:
 
 - [Download binary from github](#option-1-download-binary-from-github)
 - [Build from source](#option-2-build-from-source)
+
+#### Option 1: Download binary from github
+
+1. Download the binary for your platform: [releases](https://github.com/ClanNetwork/clan-network/releases/tag/v1.0.4-alpha).
+2. Copy it to a location in your PATH, i.e: `/usr/local/bin` or `$HOME/bin`.
+
+```sh
+wget https://github.com/ClanNetwork/clan-network/releases/download/v1.0.4-alpha/clan-network_v1.0.4-alpha_linux_amd64.tar.gz
+sudo tar -C /usr/local/bin -zxvf clan-network_v1.0.4-alpha_linux_amd64.tar.gz
+```
