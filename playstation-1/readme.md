@@ -37,3 +37,19 @@ at that time.
 
 The primary point of communication for the genesis process will be the #validators. Right now only white-listed validators can participate.
 channel on the [Clan's Discord](http://discord.gg/9m4JBfD3bh).
+## Instructions
+
+This guide assumes that you have completed the [Submit Gentx part](https://github.com/ClanNetwork/testnets/blob/main/playstation-1/submit-gentx.md).
+You should be running on a machine that meets the hardware requirements specified in Part 1 with Go installed. We are assuming you already have a daemon home (`$HOME/.clan`) setup.
+
+These examples are written targeting an Ubuntu 20.04 system. Relevant changes to commands should be made depending on the OS/architecture you are running on.
+
+Prerequisites:
+You will need `jq` and for some optional parts `make` and `git`
+installation:
+
+```sh
+sudo apt install build-essential jq -y
+
+sudo apt install git
+```
