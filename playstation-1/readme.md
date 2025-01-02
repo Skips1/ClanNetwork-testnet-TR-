@@ -53,3 +53,11 @@ sudo apt install build-essential jq -y
 
 sudo apt install git
 ```
+### 1. Update cland to v1.0.4-alpha
+
+Please update to the `v1.0.4-alpha` tag and rebuild your binaries.
+
+There are 2 options available:
+
+- [Download binary from github](#option-1-download-binary-from-github)
+- [Build from source](#option-2-build-from-source)
