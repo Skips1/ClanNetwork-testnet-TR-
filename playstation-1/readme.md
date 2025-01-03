@@ -71,3 +71,30 @@ There are 2 options available:
 wget https://github.com/ClanNetwork/clan-network/releases/download/v1.0.4-alpha/clan-network_v1.0.4-alpha_linux_amd64.tar.gz
 sudo tar -C /usr/local/bin -zxvf clan-network_v1.0.4-alpha_linux_amd64.tar.gz
 ```
+#### Option 2: Build from source
+
+Requires [Go version v1.18+](https://golang.org/doc/install)
+
+```sh
+# 1. Download the archive
+
+wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
+
+# Optional: remove previous /go files:
+
+sudo rm -rf /usr/local/go
+
+# 2. Unpack:
+
+sudo tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
+
+# 3. Add the path to the go-binary to your system path:
+# (for this to persist, add this line to your ~/.profile or ~/.bashrc or  ~/.zshrc)
+
+export PATH=$PATH:/usr/local/go/bin
+
+# 4. Verify your installation:
+
+go version
+
+# go version go1.18.1 linux/amd64
