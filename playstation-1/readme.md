@@ -98,3 +98,19 @@ export PATH=$PATH:/usr/local/go/bin
 go version
 
 # go version go1.18.1 linux/amd64
+### 2. Verify installation
+
+Verify that everything is OK.
+
+```sh
+cland version --long
+name: Clan-Network
+server_name: clan-networkd
+version: 1.0.4-alpha
+commit: 7a6a92d782c978ac730e337b28d2bc927e809739
+build_tags: ""
+go: go version go1.18 darwin/amd64
+```
+
+If the software version does not match, then please check your `$PATH` to ensure the correct `cland` is running.
+
