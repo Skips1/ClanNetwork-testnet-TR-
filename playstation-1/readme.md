@@ -121,5 +121,13 @@ There are 2 options available to retrieve the genesis file:
 - [Download genesis file](#option-1-download-genesis-file)
 - [Generate the genesis file yourself](#option-2-generate-genesis-file)
 
+  #### Option 1: Download Genesis file
+
+[Genesis File](/playstation-1/genesis.json):
+
+```bash
+curl -s  https://raw.githubusercontent.com/ClanNetwork/testnets/main/playstation-1/genesis.json > ~/.clan/config/genesis.json
+```
+
 
 
