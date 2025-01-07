@@ -129,5 +129,37 @@ There are 2 options available to retrieve the genesis file:
 curl -s  https://raw.githubusercontent.com/ClanNetwork/testnets/main/playstation-1/genesis.json > ~/.clan/config/genesis.json
 ```
 
+#### Option 2: Generate Genesis File
+
+clone the testnets folder
+
+```sh
+git clone https://github.com/ClanNetwork/testnets
+cd testnets
+```
+
+If you haven't already, install jq
+
+```sh
+# Install packages necessary to run go and jq for pretty formatting command line outputs
+sudo apt install build-essential jq -y
+```
+
+Update to the latest:
+
+```sh
+git checkout master
+git pull
+```
+
+Build the genesis file:
+
+```sh
+sudo chmod +x ./build-playstation-1-genesis.sh
+./build-playstation-1-genesis.sh
+```
+
+\_NOTE: This can take a while
+
 
 
