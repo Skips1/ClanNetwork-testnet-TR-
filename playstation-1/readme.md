@@ -114,3 +114,12 @@ go: go version go1.18 darwin/amd64
 
 If the software version does not match, then please check your `$PATH` to ensure the correct `cland` is running.
 
+### 3. Genesis file
+
+There are 2 options available to retrieve the genesis file:
+
+- [Download genesis file](#option-1-download-genesis-file)
+- [Generate the genesis file yourself](#option-2-generate-genesis-file)
+
+
+
