@@ -161,5 +161,32 @@ sudo chmod +x ./build-playstation-1-genesis.sh
 
 \_NOTE: This can take a while
 
+#### Verify your genesis file was created properly
 
+```sh
+sha256sum ~/.clan/config/genesis.json
+00df7ac7b9477597cbe5d551661190013173f2ec1985fe91f7db70c3af011d42
+```
+
+### 4. Updates to config files
+
+#### Add persistent peers in `config.toml`.
+
+```sh
+vim $HOME/.clan/config/config.toml
+```
+
+```
+persistent_peers = "43de6c2ae93262a7369f2134c19cc87109c41006@34.73.151.40:26656,c8cf12593970f5762019f0742f911df31fc2c018@34.138.179.136:26656"
+```
+
+#### Set 0 gas prices in `app.toml`:
+
+```sh
+vim $HOME/.clan/config/app.toml
+```
+
+```sh
+minimum-gas-prices = "0uclan"
+```
 
