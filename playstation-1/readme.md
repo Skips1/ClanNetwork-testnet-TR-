@@ -240,3 +240,6 @@ You can check the status with:
 ```sh
 systemctl status cland
 ```
+## Conclusion
+
+Good luck! See ya in the Discord!
