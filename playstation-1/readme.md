@@ -189,4 +189,54 @@ vim $HOME/.clan/config/app.toml
 ```sh
 minimum-gas-prices = "0uclan"
 ```
+### 5. Start your node
 
+Now that everything is setup and ready to go, you can start your node.
+
+```sh
+cland start
+```
+
+You will need some way to keep the process always running. If you're on linux, you can do this by creating a
+service.
+
+```sh
+sudo tee /etc/systemd/system/cland.service > /dev/null <<'EOF'
+[Unit]
+Description=Clan daemon
+After=network-online.target
+
+[Service]
+User=<your-username>
+ExecStart=/home/<your-username>/go/bin/cland start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl enable cland
+sudo systemctl start cland
+
+sudo tee ./status.sh <<'EOF'
+sudo systemctl status cland
+
+echo "cland service started"
+EOF
+```
+
+Then update and start the node
+
+```sh
+sudo -S systemctl daemon-reload
+sudo -S systemctl enable cland
+sudo -S systemctl start cland
+```
+
+You can check the status with:
+
+```sh
+systemctl status cland
+```
